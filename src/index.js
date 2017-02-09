@@ -6,6 +6,7 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 const YOUTUBE_API_KEY = '';
+// grab API Key from .env file;
 
 // Create a new component. This component should produce some HTML.
 class App extends Component {
