@@ -5,8 +5,6 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-const YOUTUBE_API_KEY = '';
-// grab API Key from .env file;
 
 // Create a new component. This component should produce some HTML.
 class App extends Component {
@@ -22,7 +20,7 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({key: YOUTUBE_API_KEY, term: term}, (videos) => {
+    YTSearch({key: {process.env.YOUTUBE_API_KEY}, term: term}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
